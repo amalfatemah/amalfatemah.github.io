@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amal Fatemah | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="left">
+            <a href="#hero" class="logo">AMAL FATEMAH</a>
+        </div>
+
+        <div class="center">
+            <a href="#projects">Projects</a>
+            <a href="#publications">Research</a>
+            <a href="#experience">Experience</a>
+            <!--<a href="#education">Education</a>-->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    More
+                    <span>▾</span>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="#education">Education</a>
+                    <a href="#service">Community Service</a>
+                    <a href="#skills">Skills & Tools</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="theme-toggle-container">
+                <input type="checkbox"
+                       id="themeToggle"
+                       class="theme-toggle"
+                       onchange="toggleTheme()">
+
+                <label for="themeToggle" class="toggle-label">
+                    <span class="moon">🌙</span>
+                    <span class="sun">☀️</span>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-layout">
+                <div class="hero-card">
+                    <p class="hero-tags">UNITY DEVELOPER • GAME RESEARCHER</p>
+
+                    <h1 class="hero-greeting">
+                        <span id="dynamic-greeting">Hello! I'm Amal</span>
+                    </h1>
+
+                    <p class="hero-desc">
+                        By day I build interactive experiences. By... also day (and often late at night), I study how technology shapes the way we think, learn, and connect with each other and the natural world. My research explores hope, sustainability, and more-than-human game design, while my development work spans XR, multiplayer systems, web3 and serious games.
+                    </p>
+
+                    <div class="hero-skills">
+                        <span>Unity (C#)</span><span>Gameplay Systems</span><span>VR</span>
+                        <span>AR</span><span>Profiling & Optimization</span>
+                        <span>Multiplayer</span><span>EdTech</span><span>HCI</span><span>More-Than-Human</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn-main">🎮 Projects</a>
+                        <a href="#publications" class="btn-main">📚 Research</a>
+                        <a href="#contact" class="btn-secondary">📧 Contact</a>
+                    </div>
+                </div>
+
+
+                <div class="profile-card">
+                    <img src="imgs/me.jpg" alt="Portrait of Amal Fatemah">
+                    <div class="profile-overlay">
+                        <div class="profile-header">
+                            <span class="profile-label">PLAYER PROFILE</span>
+                            <h3>Amal Fatemah</h3>
+                        </div>
+                        <div class="profile-section">
+                            <div class="info-row">
+                                <span>Class</span>
+                                <strong>Game Researcher</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Subclass</span>
+                                <strong>Unity Developer</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Current Quest</span>
+                                <strong>More-Than-Human Game Design</strong>
+                            </div>
+                        </div>
+                        <div class="profile-section">
+                            <h4>Passive Traits</h4>
+                            <div class="trait">☕ Coffee restores +10 Productivity</div>
+                            <div class="trait">📚 Carries more books than necessary</div>
+                            <div class="trait">🙈 Social battery recharges while debugging</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const greetings = [
+                "Hello! I'm Amal",
+                "Moi! Olen Ämäl",
+            ];
+
+            let greetingIndex = 0;
+
+            const greeting = document.getElementById("dynamic-greeting");
+
+            setInterval(() => {
+
+                greeting.style.opacity = 0;
+                greeting.style.transform = "translateY(-8px)";
+
+                setTimeout(() => {
+
+                    greetingIndex = (greetingIndex + 1) % greetings.length;
+
+                    greeting.textContent = greetings[greetingIndex];
+
+                    greeting.style.transform = "translateY(8px)";
+
+                    setTimeout(() => {
+                        greeting.style.opacity = 1;
+                        greeting.style.transform = "translateY(0)";
+                    }, 50);
+                }, 400);
+            }, 3000);
+        </script>
+    </section>
+
+    <!-- Hero -->
+
+    <div class="stats">
+        <div class="stat"><h3>5+</h3><p>Years Experience</p></div>
+        <div class="stat"><h3>25+</h3><p>Projects Delivered</p></div>
+        <div class="stat"><h3>4+</h3><p>Publications</p></div>
+        <div class="stat"><h3>150+</h3><p>Citations</p></div>
+    </div>
+
+    <!-- Publications -->
+    <section id="publications">
+        <div class="section-header">
+            <h2 class="section-title">Research & Publications</h2>
+
+            <div class="research-links">
+                <a href="https://scholar.google.com/citations?user=zOb2jiYAAAAJ&hl=en" target="_blank">
+                    🎓 Google Scholar
+                </a>
+
+                <a href="https://orcid.org/0000-0002-2305-2212" target="_blank">
+                    ORCID
+                </a>
+            </div>
+        </div>
+
+        <div class="publication-grid">
+            <article class="publication-card">
+                <div class="pub-thumb">
+                    <img src="imgs/SEARCH.png" alt="SEARCH Game">
+                </div>
+                <div class="pub-content">
+                    <span class="pub-type journal"> 📓 Journal Article </span>
+                    <span class="pub-year"> 2026 </span>
+                    <h4>
+                        Medical Science Educator
+                        <a class="doi-link"
+                           href="https://doi.org/10.1007/s40670-026-02671-1"
+                           target="_blank">
+                            DOI ↗
+                        </a>
+                    </h4>
+                    <h3> The SEARCH for Evidence: Designing a Game-Based Experiential Learning Intervention for Evidence-Based Medicine </h3>
+                    <p class="authors"> Minhal Fatemah, Amal Fatemah, Saima Jawad </p>
+                    <div class="tags">
+                        <span>Framework Development</span>
+                        <span>Evidence Based Medicine</span>
+                        <span>Scavenger Hunt</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication-card">
+                <div class="pub-thumb">
+                    <img src="imgs/D2.jpg" alt="SEARCH Game">
+                </div>
+                <div class="pub-content">
+                    <span class="pub-type conference"> 📄 Conference </span>
+                    <span class="pub-year"> 2025 </span>
+
+                    <h4>
+                        2025: Conference Proceedings of Nordic DiGRA 2025: Hope: Envisioning the Future of Game Cultures
+                        <a class="doi-link"
+                           href="https://doi.org/10.26503/dl.v2025i1.2413"
+                           target="_blank">
+                            DOI ↗
+                        </a>
+                    </h4>
+
+                    <h3>
+                        Towards a Hopeful Future: A Literature Review of Gamified and Game-Based Approaches in Sustainability Education
+                    </h3>
+                    <p class="authors"> Amal Fatemah, Lobna Hassan, Mirva Hyypiä </p>
+                    <div class="tags">
+                        <span>Systematic Literature Review</span>
+                        <span>Hope</span>
+                        <span>Games</span>
+                        <span>Sustainability</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication-card">
+                <div class="pub-thumb">
+                    <img src="imgs/motivation.png" alt="SEARCH Game">
+                </div>
+                <div class="pub-content">
+                    <span class="pub-type journal"> 📓 Journal Article </span>
+                    <span class="pub-year"> 2024 </span>
+
+                    <h4>
+                        Simulation & Gaming
+                        <a class="doi-link"
+                           href="https://doi.org/10.1177/10468781241237"
+                           target="_blank">
+                            DOI ↗
+                        </a>
+                    </h4>
+
+                    <h3> Effects of Gamification on Motivations of Elementary School Students: An Action Research Field Experiment </h3>
+
+                    <p class="authors"> Mohammed Mohammed, Amal Fatemah, Lobna Hassan </p>
+
+                    <div class="tags">
+                        <span>Action Research</span>
+                        <span>Gamification</span>
+                        <span>Motivation</span>
+                        <span>K-12</span>
+                        <span>STEM</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication-card">
+                <div class="pub-thumb">
+                    <img src="imgs/chem.gif" alt="SEARCH Game">
+                </div>
+                <div class="pub-content">
+                    <span class="pub-type journal"> 📓 Journal Article </span>
+                    <span class="pub-year"> 2020 </span>
+
+                    <h4>
+                        Journal of Chemical Education
+                        <a class="doi-link"
+                           href="https://pubs.acs.org/doi/10.1021/acs.jchemed.9b00690"
+                           target="_blank">
+                            DOI ↗
+                        </a>
+
+                        <a class="doi-link"
+                           href="https://youtu.be/XLo4y1Fs2dc?si=gr4UZegHitMF_9EA"
+                           target="_blank">
+                            Demo ▶
+                        </a>
+                    </h4>
+
+                    <h3> Interactive 3D Visualization of Chemical Structure Diagrams Embedded in Text to Aid Spatial Learning Process of Students </h3>
+
+                    <p class="authors"> Amal Fatemah, Shahzad Rasool, Uzma Habib </p>
+
+                    <div class="tags">
+                        <span>3D Visualization</span>
+                        <span>Stereochemistry</span>
+                        <span>Ed-tech</span>
+                        <span>STEM</span>
+                        <span>Unity</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication-card">
+                <div class="pub-thumb">
+                    <img src="imgs/Hope.jpg" alt="SEARCH Game">
+                </div>
+                <div class="pub-content">
+                    <span class="pub-type poster">🎥 Video Poster</span>
+                    <span class="pub-year"> 2025 </span>
+
+                    <h4>
+                        LUT Doctoral School Science Conference
+                        <a class="doi-link"
+                           href="https://youtu.be/ZfnwePk6boE"
+                           target="_blank">
+                            ▶ Watch Poster
+                        </a>
+                    </h4>
+
+                    <h3>Hope, Agency and Action: Exploring the Role of Games and Gamification in Education for Sustainable Development</h3>
+
+                    <p class="authors"> Amal Fatemah </p>
+                    <div class="tags">
+                        <span>Hope</span>
+                        <span>Education for Sustainable Development</span>
+                        <span>Games</span><span>Gamification</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publication-card">
+                <div class="pub-thumb">
+                    <img src="imgs/report1.png" alt="SEARCH Game">
+                </div>
+                <div class="pub-content">
+                    <span class="pub-type report">📈 Report</span>
+                    <span class="pub-year"> 2021 </span>
+
+                    <h4>
+                        Operations PRO (PVT) ltd
+                        <a class="doi-link"
+                           href="docs/Digital-business-Report.pdf"
+                           target="_blank">
+                            ↗ View Report
+                        </a>
+                    </h4>
+
+                    <h3>Digital Business: A comprehensive report on the trends and analysis of digital businesses in Islamabad 2020 - 2021</h3>
+
+                    <p class="authors"> Amal Fatemah, Mohammad Ajmal, Abdur Rehman Bin Zaheer </p>
+
+                    <div class="tags">
+                        <span>Business</span>
+                        <span>Digital Media</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title"> Development Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/VRCells.gif" alt="Preview" /></div>
+                <h3 class="project-title">Algocyte VR (Medical Simulation)</h3>
+                <p>VR experience showcasing different cell types through the perspective of an AI-powered medical imaging system.</p>
+                <div class="btn-group">
+                    <!--<a class="btn-icon" href="" target="_blank">📱 Play Store</a>-->
+                    <a class="btn-icon" href="https://youtube.com/shorts/3KdfhOYa-EE" target="_blank">▶️ Video</a>
+                </div>
+                <div class="tags"><!--<span>Unity</span>--><span>VR</span><span>Simulation</span><span>Meta Quest</span><span>Vision Pro</span><span>Medical Education</span></div>
+            </div>
+
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/VRself.gif" alt="Preview" /></div>
+                <h3 class="project-title">Medical Device MR Experience</h3>
+                <p>Mixed reality training experience for Apple Vision Pro that guides users through an AI-assisted medical testing workflow.</p>
+                <div class="btn-group">
+                    <!--<a class="btn-icon" href="https://play.google.com/store/apps/details?id=com.wisdomgames.car.parking.games.simulator" target="_blank">📱 Play Store</a>-->
+                    <a class="btn-icon" href="https://youtu.be/T7mZhHJ7nbQ" target="_blank">▶️ Video</a>
+
+                </div>
+                <div class="tags"><!--<span>Unity</span>--><span>Mixed Reality</span><span>Vision Pro</span><span>Hand Tracking</span><span>Medical Training</span></div>
+            </div>
+
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/bowling.gif" alt="Preview" /></div>
+                <h3 class="project-title">VR Bowling (Multiplayer)</h3>
+                <p>Multiplayer VR bowling experience for Meta Quest featuring networked gameplay and realistic physics based bowling mechanics.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/keq5C5FAyH8" target="_blank">▶️ Video</a>
+                </div>
+                <div class="tags"><!--<span>Unity</span>--><span>VR</span><span>Meta Quest</span><span>Photon PUN</span><span>Multiplayer</span><span>Physics</span></div>
+            </div>
+
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/LHRC.gif" alt="Preview" /></div>
+                <h3 class="project-title">Lazy Horse Race Club (Metaverse)</h3>
+                <p>Metaverse experience featuring virtual concerts, customizable NFT apartments and multiplayer games including bowling and poker.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=rJFBigq_mNE" target="_blank">▶️ Demo 1</a>
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=85D8TnSBVdM" target="_blank">▶️ Demo 2</a>
+                </div>
+                <div class="tags"><!--<span>Unity</span>--><span>VR</span><span>Multiplayer</span><span>Photon PUN</span><span>Firebase</span></div>
+            </div>
+
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/chem3D.gif" alt="3D Molecular Visualization" /></div>
+                <h3 class="project-title">ChemVision 3D</h3>
+                <p>Interactive learning application that transforms 2D chemical diagrams into 3D molecular models.</p>
+
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/XLo4y1Fs2dc?si=gr4UZegHitMF_9EA" target="_blank">▶️ Video</a>
+                </div>
+
+                <div class="tags">
+                    <span>EdTech</span>
+                    <span>Open CV</span>
+                    <span>Multithreading</span>
+                    <span>Client-Server</span>
+                    <span>Computer Vision</span>
+                </div>
+            </div>
+
+            <div class="project-card <!--hidden-project-->">
+                <div class="thumb"><img src="imgs/schole.gif" alt="Preview" /></div>
+                <h3 class="project-title">Distance Learning System</h3>
+                <p> Cross-platform game-based learning platform featuring dedicated teacher, student, parent, and administrator portals with synchronized live classrooms. </p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/YAYfuUduKmc" target="_blank">▶️ Demo 1</a>
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=euiqAIHenW4" target="_blank">▶️ Demo 2</a>
+                </div>
+                <div class="tags"><span>EdTech</span><span>Multiplayer</span><!--<span>Photon PUN</span>--><span>Playfab</span></div>
+            </div>
+
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/arvr.gif" alt="Preview" /></div>
+                <h3 class="project-title">AR/VR Poker (Multiplayer)</h3>
+                <p>Social VR poker game for Meta Quest, implementing multiplayer networking, hand animations and interactive casino gameplay.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=zKLY7L89oh0" target="_blank">▶️ Demo 1</a>
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=lqz1XmjoySQ" target="_blank">▶️ Demo 2</a>
+                </div>
+                <div class="tags"><span>AR</span><span>VR</span><span>Multiplayer</span><span>Photon PUN</span><!--<span>Firebase</span>--></div>
+            </div>
+
+            <div class="project-card">
+                <div class="thumb"><img src="imgs/METABOX.gif" alt="Preview" /></div>
+                <h3 class="project-title">Metabox (AR Game Show)</h3>
+                <p>Cross-platform AR game show experience with Firebase backend services and a desktop CMS for managing multimedia puzzle content.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/FHAagqoCWgk" target="_blank">▶️ Video</a>
+                </div>
+                <div class="tags"><!--<span>Unity</span>--><span>AR</span><span>Puzzle</span><span>Firebase</span><span>Mobile</span><!--<span>Content Management</span>--></div>
+            </div>
+
+            <div class="project-card <!--hidden-project-->">
+                <div class="thumb"><img src="imgs/akidimia.gif" alt="Preview" /></div>
+                <h3 class="project-title">AkadimiaAI (AR Chatbot)</h3>
+                <p> AR chatbot experience powered by IBM Watson, allowing users to hold voice conversations with virtual historical figures such as Einstein, Tesla, and Genghis Khan. </p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtube.com/shorts/FNKRPPu7tls" target="_blank">▶️ Video</a>
+                </div>
+                <div class="tags"><span>AR</span><span>IBM Watson</span><span>Text-To-Speech</span><span>AI</span></div>
+            </div>
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/geofinding.gif" alt="Preview" /></div>
+                <h3 class="project-title">GeoFinding (location-based AR)</h3>
+                <p> AR game where players purchase, place, and discover virtual treasure boxes in real-world locations using a Web3 token economy. </p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtube.com/shorts/3XxwNQCTEQQ" target="_blank">▶️ Video</a>
+
+                </div>
+                <div class="tags"><span>AR</span><span>Mapbox</span><span>Web3</span><span>Geolocation</span></div>
+            </div>
+
+
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/CCG.gif" alt="Preview" /></div>
+                <h3 class="project-title">Crypto Champion</h3>
+                <p>A blockchain powered strategy game where players engage in battles, collect items, earn rewards and compete against others.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/GLzJB9wyizE" target="_blank">▶️ Video</a>
+                    <a class="btn-icon" href="https://apps.apple.com/us/app/crypto-champion/id1666057009" target="_blank">App Store</a>
+                    <a class="btn-icon" href="https://cryptochampion.game/" target="_blank">Website</a>
+                </div>
+                <div class="tags"><span>2D</span><span>Web3</span><span>NFT Minting</span><span>Firebase</span></div>
+            </div>
+
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/Micropets.gif" alt="Preview" /></div>
+
+                <h3 class="project-title">MicroPets (NFT Card Game)</h3>
+                <p>A competitive multiplayer card game where players construct decks from NFT collectibles and battle by choosing attributes with the highest strategic value.</p>
+                <a class="btn-icon" href="https://www.youtube.com/watch?v=kyW8XQdnNUY" target="_blank">▶️ Video</a>
+                <div class="tags"><span>2D</span><span>NFT</span><span>Multiplayer</span><span>Photon PUN</span></div>
+            </div>
+
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/burla.gif" alt="Preview" /></div>
+                <h3 class="project-title">Kart Racing Games (Multiplayer)</h3>
+                <p>Multiplayer kart racing games featuring synchronized vehicle physics, matchmaking and optimized racing experiences.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=EBWjgUkSRDs" target="_blank">▶️ Demo 1</a>
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=HFwSuB9INqo" target="_blank">▶️ Demo 2</a>
+                </div>
+                <div class="tags"><span>3D</span><span>Multiplayer</span><span>Photon Fusion</span><span>Racing</span></div>
+            </div>
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/GunsAndAliens.gif" alt="Preview" /></div>
+                <h3 class="project-title">Remove This: Guns And Aliens</h3>
+                <p>Top-down wave based shooting game with blockchain integration, enabling players to earn cryptocurrency rewards through gameplay.</p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=UzkFWx38bPE" target="_blank">▶️ Demo 1</a>
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=XF_8kMHqkAI" target="_blank">▶️ Demo 2</a>
+                </div>
+                <div class="tags"><span>3D</span><span>Top-Down Shooter</span><span>NavMesh</span></div>
+            </div>
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/Wordopia2.gif" alt="Preview" /></div>
+                <h3 class="project-title">Wordopia: Candy Word Search</h3>
+                <p> Mobile word puzzle game featuring around 800 levels, implementing LiveOps events and sustainability-themed campaigns. </p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://www.youtube.com/watch?v=lkr3lclW3_4" target="_blank">▶️ Video</a>
+                    <a class="btn-icon" href="https://play.google.com/store/apps/details?id=com.ArtreiStudio.CandyWordSearch" target="_blank">📱 Play Store</a>
+                </div>
+                <div class="tags"><span>Puzzle</span><span>Level Design</span><span>Live Ops</span></div>
+            </div>
+
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/intraverse.gif" alt="Preview" /></div>
+                <h3 class="project-title">Intraverse</h3>
+                <p> Multiplayer fighting game using the Universal Fighting Engine, involving online combat mechanics. </p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/9gzInBqzkY4" target="_blank">▶️ Video</a>
+                </div>
+                <div class="tags"><span>3D</span><span>Fighting</span><span>UFE</span><span>Multiplayer</span></div>
+            </div>
+
+            <div class="project-card hidden-project">
+                <div class="thumb"><img src="imgs/KPoker.gif" alt="Preview" /></div>
+                <h3 class="project-title">Korean Poker (Multiplayer)</h3>
+                <p> Multiplayer digital korean poker experience with online matchmaking, synchronized game states and responsive player interactions. </p>
+                <div class="btn-group">
+                    <a class="btn-icon" href="https://youtu.be/QHWdCcg2h4w" target="_blank">▶️ Video</a>
+                </div>
+                <div class="tags"><span>2D</span><span>Multiplayer</span><span>Photon PUN</span></div>
+            </div>
+        </div>
+        <div class="load-more-container">
+
+            <button id="loadMoreBtn"
+                    class="btn-secondary"
+                    onclick="loadMoreProjects()">
+
+                Load More Projects ▼
+
+            </button>
+
+        </div>
+    </section>
+
+    <script>
+        function loadMoreProjects() {
+
+            const hidden = document.querySelectorAll(".hidden-project");
+
+            for (let i = 0; i < 3 && i < hidden.length; i++) {
+
+                hidden[i].style.display = "block";
+                hidden[i].classList.remove("hidden-project");
+
+            }
+            if (document.querySelectorAll(".hidden-project").length == 0) {
+
+                document.getElementById("loadMoreBtn").style.display = "none";
+
+            }
+        }
+    </script>
+
+
+    
+    <!--Resume Section-->
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-timeline">
+            <!-- ================= Artrei ================= -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    May 2023<br>August 2026
+                </div>
+                <article class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <img src="imgs/artrei.png"
+                                 alt="Artrei Studio"
+                                 class="company-logo">
+                            <div class="exp-info">
+                                <h3>Artrei Studio</h3>
+                                <h4>Team Lead • Senior Game Developer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Led development of commercial Web3, multiplayer, and XR game projects.</li>
+                        <li>Integrated real-time heart-rate monitoring into a focus-training game for children.</li>
+                        <li>Architected multiplayer NFT card gameplay using Photon and Firebase.</li>
+                        <li>Designed research-informed sustainability game mechanics for Green Game Jam activations.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Leadership</span>
+                        <span>Photon</span>
+                        <span>Firebase</span>
+                        <span>Web3</span>
+                        <span>XR</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ================= Rapidev ================= -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    Dec 2020<br>Apr 2023
+                </div>
+                <article class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <img src="imgs/Rapidev.png"
+                                 alt="Rapidev Games"
+                                 class="company-logo">
+                            <div class="exp-info">
+                                <h3>Rapidev Games</h3>
+                                <h4>Unity Developer → Senior Unity Developer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Led development of multiple Metaverse and play-to-earn entertainment platforms.</li>
+                        <li>Developed AR experiences including an interactive Game Show and conversational AI chatbot.</li>
+                        <li>Built location-based AR games using Mapbox and Google Maps.</li>
+                        <li>Integrated core systems for a multiplayer game-based distance learning platform.</li>
+                        <li>Published cross-platform mobile titles on Android and iOS.</li>
+                        <li>Mentored junior Unity developers and provided technical guidance across projects.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>AR</span>
+                        <span>AI</span>
+                        <span>Mapbox</span>
+                        <span>PlayFab</span>
+                        <span>Metaverse</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ================= Operations PRO ================= -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    Sep 2020<br>Nov 2020
+                </div>
+                <article class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <img src="imgs/OpsPro.webp"
+                                 alt="Operations PRO"
+                                 class="company-logo">
+                            <div class="exp-info">
+                                <h3>Operations PRO</h3>
+                                <h4>Project Management Trainee</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Led multidisciplinary teams producing reports on digital business trends.</li>
+                        <li>Developed marketing strategies supporting the launch of a content management platform.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Leadership</span>
+                        <span>Project Management</span>
+                        <span>Strategy</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ================= Earlier Experience ================= -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    2015<br>2018
+                </div>
+                <article class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <div class="exp-info">
+                                <h3>Earlier Experience</h3>
+                                <h4>Teaching • Research • Engineering</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Coding Coach</strong> — Developed robotics and IoT curricula for students aged 7–14 and supported STEM laboratory setup.</li>
+
+                        <li><strong>MATLAB Intern</strong> — Built an employee monitoring system and a handwriting recognition model using neural networks.</li>
+
+                        <li><strong>Embedded Systems Intern</strong> — Designed and fabricated a Wi-Fi enabled embedded system.</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span>Teaching</span>
+                        <span>MATLAB</span>
+                        <span>Machine Learning</span>
+                        <span>Embedded Systems</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="projects-grid">
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/lut2.png"
+                             class="company-logo"
+                             alt="LUT University">
+                        <div class="exp-info">
+                            <h3>LUT University, Finland</h3>
+                            <h4>PhD in Engineering Science</h4>
+                            <p class="degree-field">(Industrial Engineering and Management)</p>
+                        </div>
+                    </div>
+                </div>
+                <span class="exp-date">2024 – Present</span>
+                <p>
+                    <strong>Research:</strong> Hope, Sustainability, and More-Than-Human Game Design
+                </p>
+                <ul>
+                    <li>Investigating how games influence hope, sustainability, and player behavior.</li>
+                    <li>Conducted a survey study analyzed using Structural Equation Modeling (SEM).</li>
+                    <li>Recipient of two competitive research grants.</li>
+                </ul>
+                <div class="tags">
+                    <span>HCI</span>
+                    <span>SEM</span>
+                    <span>Serious Games</span>
+                    <span>Sustainability</span>
+                </div>
+            </article>
+
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/nust.png"
+                             class="company-logo"
+                             alt="National University of Sciences and Technology">
+
+                        <div class="exp-info">
+                            <h3>NUST, Pakistan</h3>
+                            <h4>MS Systems Engineering</h4>
+                            <p class="degree-field">Specialization: Cognitive Systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="exp-date">2017 – 2019</span>
+
+                <p>
+                    <strong>Thesis:</strong>
+                    <a class="edu-link"
+                       href="https://doi.org/10.1021/acs.jchemed.9b00690"
+                       target="_blank">
+                        Interactive 3D Molecular Visualization for Spatial Learning
+                    </a>
+                </p>
+
+                <ul>
+                    <li>Gold Medal for Academic Excellence 🥇 </li>
+                    <li>Designed and developed an interactive learning system for chemistry education.</li>
+                    <li>Designed and conducted a controlled user study comparing learning outcomes between two participant groups.</li>
+                </ul>
+
+                <div class="tags">
+                    <span>Human Factors</span>
+                    <span>Experimental Design</span>
+                    <span>Educational Technology</span>
+                    <span>3D Visualization</span>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/nust.png"
+                             class="company-logo"
+                             alt="National University of Sciences and Technology">
+
+                        <div class="exp-info">
+                            <h3>NUST, Pakistan</h3>
+                            <h4>BE Mechatronics Engineering</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="exp-date">2013 – 2017</span>
+
+                <p>
+                    <strong>FYP:</strong>
+                    <a class="edu-link"
+                       href="https://youtu.be/ARx7Gz8b-0M?si=yXctcoq01JeuhZ_h"
+                       target="_blank">
+                        Assistive Robot for Domestic Applications
+                    </a>
+                </p>
+
+                <ul>
+                    <li>Designed and developed an autonomous assistive robot using the Robot Operating System (ROS).</li>
+                    <li>Implemented SLAM, voice recognition, face recognition, and human-following capabilities.</li>
+                    <li>Awarded multiple merit scholarships for academic excellence.</li>
+                </ul>
+
+                <div class="tags">
+                    <span>Robotics</span>
+                    <span>ROS</span>
+                    <span>Computer Vision</span>
+                    <span>Autonomous Systems</span>
+                    <span>HRI</span>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!--End Education-->
+
+    <!--Academic & Community Service-->
+    <section id="service">
+        <h2 class="section-title">Academic & Community Service</h2>
+        <div class="projects-grid">
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/review.png"
+                             class="company-logo"
+                             alt="LUT University">
+                        <div class="exp-info">
+                            <h3>Peer Reviewer</h3>
+                        </div>
+                    </div>
+                    <span class="exp-date">2024 – Present</span>
+                </div>
+                <ul>
+                    <li>Meaningful Play Conference</li>
+                    <li>Springer Nature Journals</li>
+                </ul>
+                <div class="tags">
+                    <span>HCI</span>
+                    <span>Serious Games</span>
+                    <span>Learning</span>
+                </div>
+            </article>
+
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/kuva.png"
+                             class="company-logo"
+                             alt="NUST">
+                        <div class="exp-info">
+                            <h3>Beta/QA Tester</h3>
+                            <h4>KuvaLearn</h4>
+                        </div>
+                    </div>
+                    <span class="exp-date">2025 – present</span>
+                </div>
+                <ul>
+                    <li>Finnish language learning app</li>
+                    <li>User experience and bug testing</li>
+                </ul>
+                <div class="tags">
+                    <span>UI/UX</span>
+                    <span>Quality Assurance</span>
+                </div>
+            </article>
+
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/ICRAI.png"
+                             class="company-logo"
+                             alt="NUST">
+                        <div class="exp-info">
+                            <h3>Organizer</h3>
+                            <h4>IEEE ICRAI'16</h4>
+                        </div>
+                    </div>
+                    <span class="exp-date">2016</span>
+                </div>
+                <ul>
+                    <li>International Conference Robotics and AI</li>
+                    <li>Responsible for conference graphics</li>
+                </ul>
+                <div class="tags">
+                    <span>Design</span>
+                    <span>Management</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- Achievements & Recognition -->
+    <!-- ========================= -->
+
+    <section id="achievements">
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-award"></i>
+            Achievements & Recognition
+        </h2>
+
+
+        <div class="projects-grid">
+            <!-- EDUFI -->
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/edufi.svg"
+                             class="company-logo"
+                             alt="EDUFI Fellowship">
+                        <div class="exp-info">
+                            <h3>Research Funding</h3>
+                            <h4>EDUFI Fellowship</h4>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>Funding supporting doctoral research in games, learning, and human-technology interaction.</li>
+                </ul>
+                <div class="tags">
+                    <span>HCI</span>
+                    <span>Game Research</span>
+                </div>
+            </article>
+
+
+
+            <!-- SKR -->
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="imgs/skr.png"
+                             class="company-logo"
+                             alt="Suomen Kulttuurirahasto">
+                        <div class="exp-info">
+                            <h3>Research Funding</h3>
+                            <h4>Suomen Kulttuurirahasto (SKR)</h4>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>Funding supporting doctoral research combining game design, sustainability, and human-technology interaction.</li>
+                </ul>
+                <div class="tags">
+                    <span>Sustainability</span>
+                    <span>Game Design</span>
+                </div>
+            </article>
+
+
+            <!-- Gold Medal -->
+            <article class="experience-card">
+
+                <div class="exp-header">
+                    <div class="exp-company">
+
+                        <img src="imgs/nust.png"
+                             class="company-logo"
+                             alt="NUST">
+
+                        <div class="exp-info">
+                            <h3>Gold Medal</h3>
+                            <h4>MS Systems Engineering</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <ul>
+                    <li>Awarded for outstanding academic performance during graduate studies.</li>
+                </ul>
+
+                <div class="tags">
+                    <span>Academic Excellence</span>
+                    <span>Systems Engineering</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!--Skills and Tools-->
+
+    <section id="skills" class="container">
+        <h2 class="section-title">
+            <i class="fa-solid fa-brain"></i>
+            Skills
+        </h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>🎮 Game Development</h3>
+                <div class="tags">
+                    <span>Gameplay Programming</span>
+                    <span>Game Design</span>
+                    <span>Gameplay Architecture</span>
+                    <span>Physics</span>
+                    <span>UI/HUD</span>
+                    <span>Performance Optimization</span>
+                    <span>Cinematics</span>
+                    <span>Cross-Platform Development</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>🥽 XR & Emerging Tech</h3>
+                <div class="tags">
+                    <span>Virtual Reality</span>
+                    <span>Mixed Reality</span>
+                    <span>Augmented Reality</span>
+                    <span>Meta Quest</span>
+                    <span>visionOS</span>
+                    <span>Hand Tracking</span>
+                    <span>Web3</span>
+                    <span>Blockchain</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>🌐 Multiplayer & Backend</h3>
+                <div class="tags">
+                    <span>Realtime Networking</span>
+                    <span>Backend Integration</span>
+                    <span>Cloud Services</span>
+                    <span>REST APIs</span>
+                    <span>Authentication</span>
+                    <span>Database Management</span>
+                    <span>LiveOps</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>🎓 Research</h3>
+                <div class="tags">
+                    <span>Data Analysis</span>
+                    <span>Structural Equation Modelling</span>
+                    <span>Survey Design</span>
+                    <span>Literature Review</span>
+                    <span>Experimental Design</span>
+                    <span>Grant Writing</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>💼 Professional Skills</h3>
+                <div class="tags">
+                    <span>Technical Leadership</span>
+                    <span>Project Management</span>
+                    <span>Systems Thinking</span>
+                    <span>Code Reviews</span>
+                    <span>Technical Documentation</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Tools -->
+    <!-- ========================= -->
+    <section id="tools" class="container">
+        <h2 class="section-title">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            Tools
+        </h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <img src="imgs/tools/unity.png" alt="Unity">
+                <h3>Unity</h3>
+                <p>Primary game development engine</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/photon.svg" alt="Photon">
+                <h3>Photon</h3>
+                <p>Realtime multiplayer networking</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/firebase.svg" alt="Firebase">
+                <h3>Firebase</h3>
+                <p>Authentication, databases and cloud services</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/playfab.png" alt="PlayFab">
+                <h3>PlayFab</h3>
+                <p>Player management and backend systems</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/blender.svg" alt="Blender">
+                <h3>Blender</h3>
+                <p>3D assets editing and basic manipulation</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/mapbox.svg" alt="Mapbox">
+                <h3>Mapbox</h3>
+                <p>Location-based AR and geospatial experiences</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/stata.svg" alt="Stata">
+                <h3>Stata</h3>
+                <p>Statistical data analysis</p>
+            </div>
+
+            <div class="tool-card">
+                <img src="imgs/tools/photoshop.png" alt="Stata">
+                <h3>Photoshop</h3>
+                <p>UI, textures & graphics</p>
+            </div>
+        </div>
+    </section>
+    <!--End Skills and Tools-->
+
+
+    <!-- ========================= -->
+    <!-- Contact -->
+    <!-- ========================= -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-paper-plane"></i>
+            Get in Touch
+        </h2>
+
+        <p class="section-subtitle">
+            I'm always interested in research collaborations, Unity/XR development, and opportunities to build meaningful interactive experiences.
+        </p>
+
+        <div class="projects-grid">
+
+            <!-- Email -->
+
+            <article class="experience-card">
+
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <div class="exp-info">
+                            <h3>Email</h3>
+                            <h4>Best way to reach me</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <p><!--Feel free to get in touch regarding research or development opportunities.--></p>
+
+                <a class="contact-link"
+                   href="mailto:amalfatemah@outlook.com">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    amalfatemah@outlook.com
+                </a>
+
+            </article>
+
+            <!-- LinkedIn -->
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+
+                        <div class="exp-info">
+                            <h3>LinkedIn</h3>
+                            <h4>Professional profile</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    <a class="contact-link"
+                       href="https://linkedin.com/in/amal-fatemah"
+                       target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        View LinkedIn Profile
+                    </a>
+                </p>
+            </article>
+
+
+            <!-- Resume -->
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+
+                        <div class="exp-info">
+                            <h3>Curriculum Vitae</h3>
+                            <h4>Download PDF</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    <a class="contact-link"
+                       href="docs/Amal_Fatemah_Resume.pdf"
+                       target="_blank">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View CV
+                    </a>
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+        function copyEmail() {
+            const email = "amalfatemah@outlook.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied: " + email);
+            });
+        }
+
+        const toggle = document.getElementById("themeToggle");
+
+        // Load saved theme
+        if (localStorage.getItem("theme") === "light") {
+            document.body.classList.add("light");
+            toggle.checked = true;
+
+        }
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("light");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        }
+    </script>
+    <footer>
+        <p>© 2026 Amal Fatemah — Built with ❤️</p>
+    </footer>
+</body>
+</html>
